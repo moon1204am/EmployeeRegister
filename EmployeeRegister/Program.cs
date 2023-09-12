@@ -29,6 +29,12 @@
 
                         Console.WriteLine("Enter employee id. Needs to be unique");
                         int id = int.Parse(Console.ReadLine());
+                        bool isUnique = employee.checkUniqueId(id);
+                        while(!isUnique)
+                        {
+                            id = int.Parse(Console.ReadLine());
+                            isUnique = employee.checkUniqueId(id);
+                        }
 
                         Console.WriteLine("Enter employee salary");
                         double s = double.Parse(Console.ReadLine());
@@ -52,6 +58,7 @@
                         Console.WriteLine(foundEmployee.ToString());
                         break;
                     default:
+                        Console.WriteLine("Not a command. Try again.");
                         break;
                 }
             }
