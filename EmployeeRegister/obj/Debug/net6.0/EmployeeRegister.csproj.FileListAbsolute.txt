@@ -1,0 +1,14 @@
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\bin\Debug\net6.0\EmployeeRegister.exe
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\bin\Debug\net6.0\EmployeeRegister.deps.json
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\bin\Debug\net6.0\EmployeeRegister.runtimeconfig.json
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\bin\Debug\net6.0\EmployeeRegister.dll
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\bin\Debug\net6.0\EmployeeRegister.pdb
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\net6.0\EmployeeRegister.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\net6.0\EmployeeRegister.AssemblyInfoInputs.cache
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\net6.0\EmployeeRegister.AssemblyInfo.cs
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\net6.0\EmployeeRegister.csproj.CoreCompileInputs.cache
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\net6.0\EmployeeRegister.dll
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\net6.0\refint\EmployeeRegister.dll
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\net6.0\EmployeeRegister.pdb
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\net6.0\EmployeeRegister.genruntimeconfig.cache
+C:\Users\jobb\source\repos\EmployeeRegister\EmployeeRegister\obj\Debug\net6.0\ref\EmployeeRegister.dll
