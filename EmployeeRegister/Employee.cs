@@ -26,7 +26,7 @@ namespace EmployeeRegister
             Salary = salary;
         }
 
-        public IList<Employee> GetEmployees()
+        public static IList<Employee> GetEmployees()
         {
             try
             {
@@ -64,7 +64,7 @@ namespace EmployeeRegister
             employees.Add(emp);
         }
 
-        public bool checkUniqueId(int id)
+        public static bool checkUniqueId(int id)
         {
             var employee = employees.Where(e => e.EmployeeId == id).FirstOrDefault();
             try
@@ -83,7 +83,7 @@ namespace EmployeeRegister
 
         public override string ToString()
         {
-            return "Name: " + FirstName + " " + LastName + "\n" + "Employee ID: " + EmployeeId + "\n" + "Salary: " +  Salary.Amount;
+            return "\n" + "Name: " + FirstName + " " + LastName + "\n" + "Employee ID: " + EmployeeId + "\n" + "Salary: " +  Salary.Amount + "\n";
         }
     }
 }

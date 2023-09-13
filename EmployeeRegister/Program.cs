@@ -4,13 +4,10 @@
     {
         static void Main(string[] args)
         {
-
-            Employee employee = new Employee();
             string command;
             Console.WriteLine("Hi.");
             do
             {
-                
                 Console.WriteLine("Enter command.");
                 Console.WriteLine("[new] for adding new employee");
                 Console.WriteLine("[list] for listing all employees");
@@ -29,11 +26,11 @@
 
                         Console.WriteLine("Enter employee id. Needs to be unique");
                         int id = int.Parse(Console.ReadLine());
-                        bool isUnique = employee.checkUniqueId(id);
+                        bool isUnique = Employee.checkUniqueId(id);
                         while(!isUnique)
                         {
                             id = int.Parse(Console.ReadLine());
-                            isUnique = employee.checkUniqueId(id);
+                            isUnique = Employee.checkUniqueId(id);
                         }
 
                         Console.WriteLine("Enter employee salary");
@@ -42,10 +39,10 @@
 
                         Employee emp = new Employee(fName, lName, id, salary);
                         emp.AddEmployee(emp);
-                        Console.WriteLine("Added new Employee");
+                        Console.WriteLine("Added new employee " + emp.FirstName + " " + emp.LastName);
                         break;
                     case "list":
-                        IList<Employee> emps = employee.GetEmployees();
+                        IList<Employee> emps = Employee.GetEmployees();
                         for(int i = 0; i < emps.Count; i++)
                         {
                             Console.WriteLine(emps[i].ToString());
@@ -54,7 +51,8 @@
                     case "get":
                         Console.WriteLine("Enter employee id");
                         int empId = int.Parse(Console.ReadLine());
-                        Employee foundEmployee = employee.GetEmployee(empId);
+                        Employee foundEmployee = new Employee();
+                        foundEmployee = foundEmployee.GetEmployee(empId);
                         Console.WriteLine(foundEmployee.ToString());
                         break;
                     default:
