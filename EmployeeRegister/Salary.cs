@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeRegister
 {
-    internal class Salary
+    public class Salary
     {
         public double Amount { get; set; }
         public double TaxRate { get; set; } = 0.30;

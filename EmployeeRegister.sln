@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeRegister", "EmployeeRegister\EmployeeRegister.csproj", "{EA2D483B-85E1-4B03-9CE0-0395DDD1CF28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeRegister", "EmployeeRegister\EmployeeRegister.csproj", "{EA2D483B-85E1-4B03-9CE0-0395DDD1CF28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeRegister.Tests", "EmployeeRegister.Tests\EmployeeRegister.Tests.csproj", "{116751A2-D141-485D-915D-C143AB2B898D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EA2D483B-85E1-4B03-9CE0-0395DDD1CF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA2D483B-85E1-4B03-9CE0-0395DDD1CF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA2D483B-85E1-4B03-9CE0-0395DDD1CF28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116751A2-D141-485D-915D-C143AB2B898D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116751A2-D141-485D-915D-C143AB2B898D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116751A2-D141-485D-915D-C143AB2B898D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116751A2-D141-485D-915D-C143AB2B898D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
