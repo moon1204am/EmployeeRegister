@@ -16,9 +16,9 @@ namespace EmployeeRegister
             Amount = amount;
         }
 
-        public double CalculateSalary(double amount, double tax)
+        public double CalculateNetSalary(double amount)
         {
-            double salaryAmountAfterTax = amount - (amount * tax);
+            double salaryAmountAfterTax = amount - (amount * TaxRate);
 
             return salaryAmountAfterTax;
         } 

@@ -15,19 +15,23 @@ namespace EmployeeRegister
         public int EmployeeId { get; set; }
         public Salary Salary { get; set; }
 
-        public Employee() { }
-
-        public Employee(string firstName, string lastName, int employeeId, Salary salary)
+        public Employee(string firstName, string lastName, int employeeId, double salary)
         {
             FirstName = firstName;
             LastName = lastName;
             EmployeeId = employeeId;
-            Salary = salary;
+            Salary = new Salary(salary);
+        }
+
+        public double GetNetSalary()
+        {
+            return Salary.CalculateNetSalary(this.Salary.Amount);
         }
 
         public override string ToString()
         {
-            return "\n" + "Name: " + FirstName + " " + LastName + "\n" + "Employee ID: " + EmployeeId + "\n" + "Salary: " +  Salary.Amount + "\n";
+            return "\n" + "Name: " + FirstName + " " + LastName + "\n" + "Employee ID: " + EmployeeId + "\n" + "Salary: " +  Salary.Amount + "\n"
+                + "Salary including VAT: " + GetNetSalary() + "\n";
         }
     }
 }

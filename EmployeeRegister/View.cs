@@ -30,13 +30,13 @@ namespace EmployeeRegister
                 switch (command)
                 {
                     case "new":
-                        Console.WriteLine("Enter employee first name");
+                        Console.WriteLine("Enter employee first name:");
                         string fName = Console.ReadLine();
 
-                        Console.WriteLine("Enter employee last name");
+                        Console.WriteLine("Enter employee last name:");
                         string lName = Console.ReadLine();
 
-                        Console.WriteLine("Enter employee id. Needs to be unique");
+                        Console.WriteLine("Enter employee id. Needs to be unique!");
                         int id = int.Parse(Console.ReadLine());
                         bool isUnique = Register.checkUniqueId(id);
                         while (!isUnique)
@@ -45,14 +45,13 @@ namespace EmployeeRegister
                             isUnique = Register.checkUniqueId(id);
                         }
 
-                        Console.WriteLine("Enter employee salary");
+                        Console.WriteLine("Enter employee salary:");
                         double s = double.Parse(Console.ReadLine());
-                        Salary salary = new Salary(s);
 
-                        Employee emp = new Employee(fName, lName, id, salary);
+                        Employee emp = new Employee(fName, lName, id, s);
 
                         register.AddEmployee(emp);
-                        Console.WriteLine("Added new employee " + emp.FirstName + " " + emp.LastName);
+                        Console.WriteLine("Added new employee " + emp.FirstName + " " + emp.LastName + ".");
                         break;
                     case "list":
                         IList<Employee> emps = Register.GetEmployees();
@@ -62,7 +61,7 @@ namespace EmployeeRegister
                         }
                         break;
                     case "get":
-                        Console.WriteLine("Enter employee id");
+                        Console.WriteLine("Enter employee id:");
                         int empId = int.Parse(Console.ReadLine());
                         Employee foundEmployee = register.GetEmployee(empId);
                         Console.WriteLine(foundEmployee.ToString());
