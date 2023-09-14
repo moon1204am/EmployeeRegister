@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            View view = new View();
+            Block view = new Block();
             view.ShowOptions();
 
         }

@@ -31,7 +31,7 @@ namespace EmployeeRegister
         public override string ToString()
         {
             return "\n" + "Name: " + FirstName + " " + LastName + "\n" + "Employee ID: " + EmployeeId + "\n" + "Salary: " +  Salary.Amount + "\n"
-                + "Salary including VAT: " + GetNetSalary() + "\n";
+                + "Net salary: " + GetNetSalary() + "\n";
         }
     }
 }
