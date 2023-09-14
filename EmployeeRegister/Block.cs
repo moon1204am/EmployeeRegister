@@ -9,10 +9,12 @@ namespace EmployeeRegister
     internal class Block
     {
         Register register;
+        Validator validator;
 
         public Block() 
         {
             register = new Register();
+            validator = new Validator();
         }
         public void ShowOptions()
         {
@@ -50,16 +52,43 @@ namespace EmployeeRegister
         {
             Console.WriteLine("Enter employee first name:");
             string fName = Console.ReadLine();
+            
+            while(!validator.ValidateName(fName))
+            {
+                Console.WriteLine("Not a valid name. Enter again:");
+                fName = Console.ReadLine();
+            }
 
             Console.WriteLine("Enter employee last name:");
             string lName = Console.ReadLine();
 
+            while (!validator.ValidateName(lName))
+            {
+                Console.WriteLine("Not a valid name. Enter again:");
+                lName = Console.ReadLine();
+            }
+
             Console.WriteLine("Enter employee id. Needs to be unique!");
-            int id = int.Parse(Console.ReadLine());
+            string empId = Console.ReadLine();
+
+            while(!validator.ValidateNumber(empId))
+            {
+                Console.WriteLine("Not a valid id. Enter again:");
+                empId = Console.ReadLine();
+            }
+            int id = int.Parse(empId);
+
             bool isUnique = Register.checkUniqueId(id);
             while (!isUnique)
             {
-                id = int.Parse(Console.ReadLine());
+                empId = Console.ReadLine();
+                while (!validator.ValidateNumber(empId))
+                {
+                    Console.WriteLine("Not a valid id. Enter again:");
+                    empId = Console.ReadLine();
+                }
+
+                id = int.Parse(empId);
                 isUnique = Register.checkUniqueId(id);
             }
 
@@ -69,7 +98,7 @@ namespace EmployeeRegister
             Employee emp = new Employee(fName, lName, id, s);
 
             register.AddEmployee(emp);
-            Console.WriteLine("Added new employee " + emp.FirstName + " " + emp.LastName + ".");
+            Console.WriteLine($"\nAdded new employee { emp.FirstName} { emp.LastName}.\n");
         }
 
         public void ListAllEmployees()
@@ -84,9 +113,16 @@ namespace EmployeeRegister
         public void GetEmployeeById()
         {
             Console.WriteLine("Enter employee id:");
-            int empId = int.Parse(Console.ReadLine());
-            Employee foundEmployee = register.GetEmployee(empId);
-            Console.WriteLine(foundEmployee.ToString());
+            string empId = Console.ReadLine();
+            if(validator.ValidateNumber(empId))
+            {
+                int id = int.Parse(empId);
+                Employee foundEmployee = register.GetEmployee(id);
+                if(foundEmployee != null)
+                {
+                    Console.WriteLine(foundEmployee.ToString());
+                }
+            } 
         }
     }
 }

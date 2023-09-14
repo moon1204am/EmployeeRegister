@@ -16,7 +16,7 @@ namespace EmployeeRegister
             {
                 if (employeeRegister.Count == 0)
                 {
-                    throw new EmployeeListEmptyException("Could not fetch employees. No employees registered.");
+                    throw new EmployeeListEmptyException("\nCould not fetch employees. No employees registered.\n");
                 }
 
             }
@@ -34,7 +34,7 @@ namespace EmployeeRegister
             {
                 if (employee == null)
                 {
-                    throw new EmployeeNotFoundException("Employee with employee id " + employeeId + " not found.");
+                    throw new EmployeeNotFoundException($"\nEmployee with employee id {employeeId} not found.\n");
                 }
             }
             catch (EmployeeNotFoundException e)
@@ -56,7 +56,7 @@ namespace EmployeeRegister
             {
                 if (employee != null)
                 {
-                    throw new NonUniqueEmployeeIdException("Employee id " + id + " already exists. Please enter another one");
+                    throw new NonUniqueEmployeeIdException($"\nEmployee id {id} already exists. Please enter another one:");
                 }
             }
             catch (NonUniqueEmployeeIdException e)
